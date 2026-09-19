@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tulipix is a local-first digital-life app for music, video, photos, books, documents, cloud storage, transfer, finance, tools and more — with customizable sections and privacy-focused workflows.">
+<meta name="keywords" content="Tulipix, digital life app, local-first app, media manager, music player, video library, photo manager, book reader, file transfer, cloud storage, document manager, personal productivity app">
+<meta name="author" content="Tulipix">
+<meta name="application-name" content="Tulipix">
+<meta name="theme-color" content="#7157e8">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://tulipix.pro/">
+<link rel="icon" type="image/png" sizes="32x32" href="Tulipix-Logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="Tulipix-Logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Tulipix-Logo.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tulipix">
+<meta property="og:title" content="Tulipix — Your Digital World, One App">
+<meta property="og:description" content="A local-first digital-life app for your media, files, documents, cloud, tools and everyday workflows.">
+<meta property="og:url" content="https://tulipix.pro/">
+<meta property="og:image" content="https://tulipix.pro/Tulipix-Logo.png">
+<meta property="og:image:alt" content="Tulipix logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tulipix — Your Digital World, One App">
+<meta name="twitter:description" content="A local-first digital-life app for media, files, documents, cloud, tools and everyday workflows.">
+<meta name="twitter:image" content="https://tulipix.pro/Tulipix-Logo.png">
+<meta name="twitter:image:alt" content="Tulipix logo">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tulipix",
+  "applicationCategory": "MultimediaApplication",
+  "description": "A local-first digital-life app combining media, files, documents, cloud storage, transfer, finance and tools in a modular interface.",
+  "url": "https://tulipix.pro/",
+  "image": "https://tulipix.pro/Tulipix-Logo.png",
+  "logo": "https://tulipix.pro/Tulipix-Logo.png",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Tulipix Free",
+      "price": "0",
+      "priceCurrency": "INR",
+      "url": "https://tulipix.pro/"
+    },
+    {
+      "@type": "Offer",
+      "name": "Tulipix Pro Yearly",
+      "price": "999",
+      "priceCurrency": "INR",
+      "url": "https://tulipix.pro/"
+    },
+    {
+      "@type": "Offer",
+      "name": "Tulipix Pro Lifetime",
+      "price": "2500",
+      "priceCurrency": "INR",
+      "url": "https://tulipix.pro/"
+    },
+    {
+      "@type": "Offer",
+      "name": "Tulipix Pro Yearly",
+      "price": "14.99",
+      "priceCurrency": "USD",
+      "url": "https://tulipix.pro/"
+    },
+    {
+      "@type": "Offer",
+      "name": "Tulipix Pro Lifetime",
+      "price": "39.99",
+      "priceCurrency": "USD",
+      "url": "https://tulipix.pro/"
+    }
+  ]
+}
+</script>
+<title>Tulipix — Your Digital World, One App</title>
+<style>
+:root{
+  --bg:#f8f7fc; --surface:#ffffff; --surface2:#f1eff9; --text:#201d2b; --muted:#6f6a7d;
+  --primary:#7157e8; --primary2:#a15de9; --pink:#e65b9f; --cyan:#28b8d0; --line:#e4e0ed;
+  --shadow:0 20px 60px rgba(58,45,99,.10); --radius:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:
+radial-gradient(circle at 12% 4%,rgba(142,117,245,.16),transparent 26rem),
+radial-gradient(circle at 88% 8%,rgba(230,91,159,.10),transparent 25rem),var(--bg);line-height:1.55}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(248,247,252,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(228,224,237,.8)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+.logo{width:40px;height:40px;border-radius:13px;object-fit:cover;display:block;box-shadow:0 8px 24px rgba(113,87,232,.20)}
+.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px;font-weight:600}
+.navlinks a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:14px;font-weight:750;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:linear-gradient(135deg,var(--primary),#8b5de8);color:#fff;box-shadow:0 12px 28px rgba(113,87,232,.25)}
+.btn.ghost{background:rgba(255,255,255,.7);border-color:var(--line)}
+.hero{padding:92px 0 70px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:#eeeaff;color:#6551c9;font-size:13px;font-weight:800}
+h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.055em;margin:22px auto 22px;max-width:950px}
+.gradient{background:linear-gradient(100deg,#5d4bd2,#9a5de8 48%,#e25a9d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:760px;margin:0 auto 30px;color:var(--muted);font-size:19px}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.trust{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;color:#7c7789;font-size:13px;margin-top:22px}
+.trust span{padding:6px 10px}
+.demo-wrap{margin:48px auto 0;max-width:1060px}
+.player{background:linear-gradient(135deg,#faf8ff,#efebfa);border:1px solid #e0d9ed;border-radius:36px;padding:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:340px 1fr;gap:30px;text-align:left}
+.album{aspect-ratio:1;border-radius:28px;background:linear-gradient(145deg,#d8b08e,#b86d71 48%,#7c3b73);position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:25px;color:#fff}
+.album:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 50% 38%,rgba(255,244,220,.9) 0 7%,transparent 7.5%),
+linear-gradient(90deg,rgba(255,255,255,.10),transparent 35%,rgba(0,0,0,.14)),
+repeating-linear-gradient(90deg,transparent 0 42px,rgba(75,38,38,.25) 43px 48px);
+mix-blend-mode:soft-light}
+.albumtitle{position:relative;font-weight:950;font-size:45px;letter-spacing:-.06em;line-height:.82;text-shadow:0 3px 12px rgba(0,0,0,.18)}
+.albumtitle span{color:#52c5d1}
+.player-main{padding:8px 0}
+.p-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.t-brand{font-weight:850;font-size:19px}
+.controls-top{display:flex;gap:8px}
+.dot{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#7358e8;box-shadow:0 5px 18px rgba(60,45,100,.08)}
+.song{font-size:31px;font-weight:850;letter-spacing:-.035em;margin:0}
+.artist{font-size:18px;color:#706a7d;margin:3px 0 16px}
+.seek{background:#fff;border-radius:20px;padding:10px 14px;box-shadow:0 12px 28px rgba(75,56,120,.08)}
+.seekline{height:7px;border-radius:99px;background:#f0eaf6;overflow:hidden}.seekline i{display:block;width:58%;height:100%;background:linear-gradient(90deg,#e766a7,#7b5ae8);border-radius:99px}
+.times{display:flex;justify-content:space-between;font-weight:750;font-size:13px;margin-bottom:7px}
+.transport{display:flex;justify-content:center;align-items:center;gap:18px;margin:20px 0}
+.transport span{width:48px;height:48px;border-radius:16px;background:#fff;display:grid;place-items:center;color:#655b79}
+.play{width:64px!important;height:64px!important;border-radius:50%!important;background:#24113b!important;color:#fff!important;box-shadow:0 12px 28px rgba(226,91,159,.35)!important;font-size:21px}
+.vol{display:flex;align-items:center;gap:12px;color:#4c455a}.vline{height:7px;flex:1;background:#eee7f2;border-radius:99px;overflow:hidden}.vline i{display:block;width:73%;height:100%;background:#dc5d9e}
+.section{padding:88px 0}
+.section.alt{background:rgba(255,255,255,.55);border-top:1px solid rgba(228,224,237,.6);border-bottom:1px solid rgba(228,224,237,.6)}
+.kicker{color:#6c57d9;text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:850}
+h2{font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-.045em;margin:10px 0 14px}
+.lead{color:var(--muted);font-size:17px;max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:38px}
+.card{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 10px 35px rgba(50,40,80,.05)}
+.card h3{margin:12px 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+.icon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:20px;background:#eeeaff}
+.cards-wide{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.module{min-height:210px}.module strong{font-size:18px}.module ul{padding-left:18px;color:var(--muted);font-size:14px;margin-bottom:0}.module li{margin:5px 0}
+.designs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:35px}
+.design{border-radius:24px;padding:22px;min-height:190px;border:1px solid var(--line);overflow:hidden;position:relative}
+.design h3{margin:70px 0 5px}.design p{margin:0;color:var(--muted);font-size:13px}
+.d1{background:linear-gradient(145deg,#fff8fa,#f4edff)}.d2{background:linear-gradient(145deg,#f7f3ff,#ebe7f7)}.d3{background:linear-gradient(145deg,#f8f0ee,#eee9e9);border:2px solid #a96e62}.d4{background:linear-gradient(145deg,#e9edf5,#dce2ef);box-shadow:inset 0 0 25px rgba(80,90,120,.10)}
+.design .sample{position:absolute;top:18px;left:18px;right:18px;height:38px;border-radius:13px;background:rgba(255,255,255,.68);box-shadow:0 8px 20px rgba(50,40,80,.08)}
+.features{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.big-card{background:linear-gradient(145deg,#20163c,#38205c);color:#fff;border-radius:32px;padding:34px;box-shadow:0 25px 70px rgba(41,23,75,.22)}
+.big-card .mini{color:#d5caef;font-size:14px}.big-card h3{font-size:31px;line-height:1.1;margin:12px 0}.big-card ul{padding-left:19px;color:#ded6ef}.big-card li{margin:9px 0}
+.checks{display:grid;gap:12px;margin-top:25px}.check{display:flex;gap:11px;align-items:flex-start}.check b{display:block}.check span{color:var(--muted);font-size:14px}
+.pricing{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:850px;margin:38px auto 0}
+.price{background:#fff;border:1px solid var(--line);border-radius:30px;padding:30px;position:relative;box-shadow:var(--shadow)}
+.price.pro{border:2px solid #795be7;transform:translateY(-8px);background:linear-gradient(145deg,#fff,#f7f2ff)}
+.badge{position:absolute;top:18px;right:18px;background:#e9e2ff;color:#6549d0;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:850}
+.price h3{font-size:25px;margin:0}.amount{font-size:50px;font-weight:900;letter-spacing:-.06em;margin:16px 0 2px}.amount small{font-size:15px;font-weight:650;color:var(--muted);letter-spacing:0}.price .sub{color:var(--muted);font-size:14px}.price ul{list-style:none;padding:0;margin:22px 0}.price li{padding:7px 0;border-bottom:1px solid #f0edf4;font-size:14px}.price li:last-child{border:0}
+.faq{max-width:820px;margin:36px auto 0}.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:10px 0}.faq summary{cursor:pointer;font-weight:750}.faq p{color:var(--muted);font-size:14px}
+footer{padding:45px 0 65px;color:var(--muted)}.footerin{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);padding-top:28px}
+.modal{position:fixed;inset:0;background:rgba(26,19,42,.56);backdrop-filter:blur(10px);display:none;place-items:center;z-index:50;padding:20px}.modal.open{display:grid}
+.modalbox{width:min(500px,100%);background:#fff;border-radius:28px;padding:28px;box-shadow:0 30px 100px rgba(0,0,0,.25);position:relative}.close{position:absolute;right:18px;top:18px;border:0;background:#f2eef7;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:20px}
+.payhead{display:flex;justify-content:space-between;align-items:center;padding-right:45px}.payhead h3{font-size:25px;margin:0}.demo{font-size:11px;font-weight:850;color:#8b4c00;background:#fff0d5;border-radius:999px;padding:6px 9px}
+.pay-tabs{display:flex;gap:8px;margin:22px 0 14px}.pay-tabs button{flex:1;padding:11px;border-radius:12px;border:1px solid var(--line);background:#faf9fc;cursor:pointer;font-weight:700}.pay-tabs button.active{background:#eee8ff;border-color:#a493ef;color:#6249cc}
+.paypanel{display:none}.paypanel.active{display:block}.field{margin:10px 0}.field label{display:block;font-size:12px;font-weight:750;margin-bottom:6px}.field input{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:12px;font:inherit;outline:none}.field input:focus{border-color:#8d78e7;box-shadow:0 0 0 4px #eeeaff}
+.order{background:#f7f4fb;border-radius:15px;padding:14px;display:flex;justify-content:space-between;margin:15px 0;font-size:14px}.secure{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+@media(max-width:900px){.grid,.designs{grid-template-columns:repeat(2,1fr)}.cards-wide{grid-template-columns:1fr 1fr}.player{grid-template-columns:1fr}.album{max-width:430px;width:100%;margin:auto}.features{grid-template-columns:1fr}.pricing{grid-template-columns:1fr}.price.pro{transform:none}}
+@media(max-width:620px){.container{width:min(100% - 24px,1180px)}.navlinks{display:none}.hero{padding-top:65px}.grid,.designs,.cards-wide{grid-template-columns:1fr}.player{padding:16px;border-radius:25px}.song{font-size:26px}h1{font-size:49px}.footerin{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <a class="brand" href="#" aria-label="Tulipix home"><img class="logo" src="Tulipix-Logo.png" alt="Tulipix logo" width="40" height="40"><span>Tulipix</span></a>
+    <div class="navlinks">
+      <a href="#features">Features</a><a href="#design">Design</a><a href="#pro">Pro</a><a href="#faq">FAQ</a><a href="Transfer.html">Transfer</a>
+    </div>
+    <button class="btn primary" onclick="openPay('yearly')">Get Pro</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">LOCAL-FIRST • PRIVATE • POWERFUL</span>
+    <h1>Your digital world.<br><span class="gradient">One beautiful app.</span></h1>
+    <p>Tulipix brings your media, files, documents, cloud storage, tools and everyday life into one modular desktop experience — while letting you decide exactly what stays in your sidebar.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#pro">See Pro</a>
+      <a class="btn ghost" href="#features">Explore Tulipix</a>
+    </div>
+    <div class="trust"><span>12 modular sections</span><span>4 design languages</span><span>Light • Dark • OLED</span><span>80+ tools</span></div>
+
+    <div class="demo-wrap">
+      <div class="player">
+        <div class="album"><div class="albumtitle">LENKA<br><span>TWO</span></div></div>
+        <div class="player-main">
+          <div class="p-top"><div class="t-brand">🌸 Tulipix</div><div class="controls-top"><div class="dot">↗</div><div class="dot">☾</div><div class="dot">⤨</div><div class="dot">×</div></div></div>
+          <h2 class="song">Everything's Okay</h2>
+          <div class="artist">Lenka · Two (Expanded Edition)</div>
+          <div class="seek"><div class="times"><span>1:44</span><span>3:51</span></div><div class="seekline"><i></i></div></div>
+          <div class="transport"><span>⤨</span><span>◀|</span><span class="play">Ⅱ</span><span>|▶</span><span>↻</span></div>
+          <div class="vol"><span>🔊</span><div class="vline"><i></i></div><b>87</b><span>⛶</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section alt" id="features">
+<div class="container">
+  <div class="kicker">One app, many worlds</div>
+  <h2>More than sections.<br>Entire ecosystems.</h2>
+  <p class="lead">Tulipix keeps complex functionality grouped into a small number of understandable modules. A sidebar can be customized, reordered, hidden or switched off — including stopping its background work.</p>
+
+  <div class="cards-wide">
+    <div class="card module"><div class="icon">🎬</div><strong>Video</strong><ul><li>Movies & Shows</li><li>Local videos</li><li>Live TV</li><li>Streaming content</li></ul></div>
+    <div class="card module"><div class="icon">🎵</div><strong>Music</strong><ul><li>Local music</li><li>Podcasts & audiobooks</li><li>Radio & YouTube</li><li>Music downloader</li></ul></div>
+    <div class="card module"><div class="icon">📚</div><strong>Books</strong><ul><li>Library & reader</li><li>Book downloader</li><li>Genesis integration</li><li>Personal shelf</li></ul></div>
+    <div class="card module"><div class="icon">📷</div><strong>Photos</strong><ul><li>Timeline</li><li>People & places</li><li>Photo organization</li><li>Editor</li></ul></div>
+    <div class="card module"><div class="icon">💰</div><strong>Finances</strong><ul><li>Finance management</li><li>Finance Planner</li><li>Planning workflows</li><li>Organized financial data</li></ul></div>
+    <div class="card module"><div class="icon">☁️</div><strong>Cloud</strong><ul><li>Rclone GUI</li><li>Multiple cloud backends</li><li>File operations</li><li>Power-user workflows</li></ul></div>
+    <div class="card module"><div class="icon">🔗</div><strong>Transfer</strong><ul><li>Device-to-device transfer</li><li>Local network workflows</li><li>Phone companion workflows</li><li>Fast file sharing</li></ul></div>
+    <div class="card module"><div class="icon">🧰</div><strong>Tools</strong><ul><li>80+ utilities</li><li>One toolbox</li><li>System & file helpers</li><li>Power-user utilities</li></ul></div>
+    <div class="card module"><div class="icon">📔</div><strong>Journal</strong><ul><li>Daily journal</li><li>Personal entries</li><li>Local-first storage</li><li>Private by design</li></ul></div>
+    <div class="card module"><div class="icon">🍳</div><strong>Kitchen</strong><ul><li>Recipes</li><li>Cooking mode</li><li>Meal planning</li><li>Shopping lists</li></ul></div>
+    <div class="card module"><div class="icon">📰</div><strong>Feed</strong><ul><li>RSS / Atom / JSON Feed</li><li>Offline reading</li><li>Content organization</li><li>Read-aloud workflows</li></ul></div>
+    <div class="card module"><div class="icon">📄</div><strong>Papers</strong><ul><li>Document organization</li><li>OCR & search</li><li>Smart classification</li><li>Expiry & renewal workflows</li></ul></div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container features">
+  <div>
+    <div class="kicker">Built for control</div>
+    <h2>Your sidebar.<br>Your Tulipix.</h2>
+    <p class="lead">Tulipix doesn't force every capability on everyone. Choose a preset or build your own setup. Show sections, hide them, turn them off, drag to reorder, and choose what opens at launch.</p>
+    <div class="checks">
+      <div class="check"><span>✓</span><div><b>12 modular sections</b><span>Use only the parts of Tulipix you actually want.</span></div></div>
+      <div class="check"><span>✓</span><div><b>Shown / Hidden / Off</b><span>Off can stop the section's background work, not just its icon.</span></div></div>
+      <div class="check"><span>✓</span><div><b>Ready-made presets</b><span>Everything, Media only, Work only, Just Photos and Lean.</span></div></div>
+      <div class="check"><span>✓</span><div><b>Drag-and-drop order</b><span>Put your most-used sections exactly where you want them.</span></div></div>
+    </div>
+  </div>
+  <div class="big-card">
+    <div class="mini">SETTINGS → SECTIONS</div>
+    <h3>Power without the clutter.</h3>
+    <p>Someone can run Tulipix with only Home, Music and Photos. A power user can enable the full suite. Same application, completely different footprint.</p>
+    <ul><li>Custom sidebar</li><li>Custom launch destination</li><li>Background-work control</li><li>Independent modules</li></ul>
+  </div>
+</div>
+</section>
+
+<section class="section alt" id="design">
+<div class="container">
+  <div class="kicker">12 visual experiences</div>
+  <h2>Choose how Tulipix feels.</h2>
+  <p class="lead">Four independent design languages meet three display themes. The result is twelve distinct Tulipix combinations — without changing the underlying product.</p>
+  <div class="designs">
+    <div class="design d1"><div class="sample"></div><h3>Material You</h3><p>Friendly surfaces, expressive controls and an adaptive color philosophy.</p></div>
+    <div class="design d2"><div class="sample"></div><h3>Glassmorphic</h3><p>Layered light, soft depth, transparency and a premium media aesthetic.</p></div>
+    <div class="design d3"><div class="sample"></div><h3>Original Tulipix</h3><p>The experimental language that evolved directly from Tulipix's own design process.</p></div>
+    <div class="design d4"><div class="sample"></div><h3>Neumorphic</h3><p>Soft physical depth, tactile surfaces and restrained elevation.</p></div>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">☀️</div><h3>Light</h3><p>Bright, clean and spacious.</p></div>
+    <div class="card"><div class="icon">🌙</div><h3>Dark</h3><p>Comfortable contrast for darker environments.</p></div>
+    <div class="card"><div class="icon">◼</div><h3>OLED</h3><p>Deep black surfaces designed for OLED displays.</p></div>
+    <div class="card"><div class="icon">🎨</div><h3>Material color system</h3><p>Planned seed-color personalization can generate a coherent tonal palette.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="kicker">Why Tulipix</div>
+  <h2>Local-first at its core.</h2>
+  <p class="lead">Tulipix is designed around your files, your devices and your workflow. Online services can be integrated where they make sense, but the app's identity is not built around forcing your life into a cloud account.</p>
+  <div class="grid">
+    <div class="card"><div class="icon">🔒</div><h3>Your data</h3><p>Built around local media, files and personal content instead of making the cloud the center of everything.</p></div>
+    <div class="card"><div class="icon">🧩</div><h3>Modular</h3><p>Independent sections mean you can build a setup around your actual needs.</p></div>
+    <div class="card"><div class="icon">⚡</div><h3>Power-user ready</h3><p>Downloaders, Rclone, 80+ tools, transfer workflows, OCR and advanced media features live under one roof.</p></div>
+    <div class="card"><div class="icon">🎨</div><h3>Actually customizable</h3><p>Not just a dark-mode toggle: four design languages, three themes and a configurable sidebar.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section alt" id="pro">
+<div class="container" style="text-align:center">
+  <div class="kicker">Tulipix Pro</div>
+  <h2>Free enough to love.<br><span class="gradient">Pro enough to keep.</span></h2>
+  <p class="lead" style="margin:auto">The free edition stays useful. Pro unlocks the power-user layer — advanced automation, AI, downloaders and deeper tools — without turning the core application into a crippled demo.</p>
+
+  <div class="pricing">
+    <div class="price">
+      <h3>Free</h3><div class="amount">₹0 <small>forever</small></div><div class="sub">For everyday use</div>
+      <ul>
+        <li>✓ Core Tulipix sections</li><li>✓ Music, Video, Photos & Books</li><li>✓ Journal, Kitchen & Feed</li><li>✓ Basic Papers</li><li>✓ Finance & Transfer</li><li>✓ Light, Dark & OLED</li><li>✓ Four design languages</li><li>✓ Essential tools</li>
+      </ul>
+      <button class="btn ghost" style="width:100%" onclick="alert('The free edition does not require payment.')">Use Free</button>
+    </div>
+    <div class="price pro">
+      <div class="badge">POWER USER</div>
+      <h3>Pro</h3><div class="amount">₹999 <small>/ year</small></div><div class="sub">or ₹2,500 lifetime · $14.99/year · $39.99 lifetime</div>
+      <ul>
+        <li>✓ Everything in Free</li><li>✓ Full 80+ tool suite</li><li>✓ Full downloaders</li><li>✓ Full AI features</li><li>✓ Advanced Papers + OCR / automation</li><li>✓ Advanced Cloud / Rclone workflows</li><li>✓ Advanced customization</li><li>✓ Future Pro features</li>
+      </ul>
+      <button class="btn primary" style="width:100%" onclick="openPay('yearly')">Get Tulipix Pro</button>
+      <button class="btn ghost" style="width:100%;margin-top:8px" onclick="openPay('lifetime')">View Lifetime</button>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin-top:15px">Demo checkout only — no real payment is processed on this page.</p>
+</div>
+</section>
+
+<section class="section" id="faq">
+<div class="container">
+  <div style="text-align:center"><div class="kicker">Questions</div><h2>Frequently asked</h2></div>
+  <div class="faq">
+    <details><summary>Is Tulipix just a music player?</summary><p>No. Music is one section. Tulipix also covers video, photos, books, finance, transfer, tools, cloud storage, journal, kitchen, feeds and papers.</p></details>
+    <details><summary>How can one app contain so many features without becoming overwhelming?</summary><p>Tulipix uses modular sections. Users can show, hide or turn sections off, reorder them, and choose a launch section. Presets provide quick starting configurations.</p></details>
+    <details><summary>What is the difference between a hidden and an off section?</summary><p>Hidden removes a section from normal navigation. Off goes further: the section can stop its background work as well.</p></details>
+    <details><summary>What are the four design languages?</summary><p>Material You-inspired, Glassmorphic, Original Tulipix and Neumorphic. Each can be paired with Light, Dark or OLED.</p></details>
+    <details><summary>Does Pro lock my data?</summary><p>The intended product philosophy is that core local data remains yours. Pro is for advanced functionality, not for holding your files hostage.</p></details>
+    <details><summary>Is the payment shown here real?</summary><p>No. This website includes a front-end demo checkout popup. Connect a real payment provider later to process actual purchases.</p></details>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="container footerin">
+  <div><strong style="color:var(--text)">Tulipix</strong><div>© 2026 · A local-first personal media & digital-life suite.</div></div>
+  <div>Built with Rust + Flutter · Designed by Atish</div>
+</div>
+</footer>
+
+<div class="modal" id="paymentModal" onclick="if(event.target===this)closePay()">
+  <div class="modalbox">
+    <button class="close" onclick="closePay()">×</button>
+    <div class="payhead"><h3>Get Tulipix Pro</h3><span class="demo">DEMO PAYMENT</span></div>
+    <div class="order"><span id="planName">Tulipix Pro — Yearly</span><b id="planPrice">₹999</b></div>
+    <div class="pay-tabs">
+      <button class="active" onclick="tab('card',this)">Card</button>
+      <button onclick="tab('upi',this)">UPI</button>
+      <button onclick="tab('wallet',this)">Wallet</button>
+    </div>
+    <div class="paypanel active" id="card">
+      <div class="field"><label>Card number</label><input placeholder="1234 5678 9012 3456"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="field"><label>Expiry</label><input placeholder="MM / YY"></div><div class="field"><label>CVV</label><input placeholder="•••"></div></div>
+      <div class="field"><label>Name on card</label><input placeholder="Your name"></div>
+    </div>
+    <div class="paypanel" id="upi">
+      <div class="field"><label>UPI ID</label><input placeholder="name@upi"></div>
+      <p class="secure">A real integration can hand this request to your chosen payment provider.</p>
+    </div>
+    <div class="paypanel" id="wallet">
+      <div class="field"><label>Wallet / provider</label><input placeholder="Demo wallet"></div>
+      <p class="secure">This is a visual checkout prototype.</p>
+    </div>
+    <button class="btn primary" style="width:100%;margin-top:10px" onclick="demoPay()">Continue to payment</button>
+    <div class="secure">🔒 Demo only · no card or payment information is transmitted.</div>
+  </div>
+</div>
+
+<script>
+function openPay(plan){
+  document.getElementById('paymentModal').classList.add('open');
+  const lifetime=plan==='lifetime';
+  document.getElementById('planName').textContent=lifetime?'Tulipix Pro — Lifetime':'Tulipix Pro — Yearly';
+  document.getElementById('planPrice').textContent=lifetime?'₹2,500 / $39.99':'₹999 / $14.99';
+}
+function closePay(){document.getElementById('paymentModal').classList.remove('open')}
+function tab(id,btn){
+  document.querySelectorAll('.paypanel').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pay-tabs button').forEach(x=>x.classList.remove('active'));
+  document.getElementById(id).classList.add('active');btn.classList.add('active');
+}
+function demoPay(){
+  alert('Demo checkout: payment was not processed. Connect Razorpay, Stripe, Paddle, Lemon Squeezy, or another provider here.');
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePay()});
+</script>
+</body>
+</html>
