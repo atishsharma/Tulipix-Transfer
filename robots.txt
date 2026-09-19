@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tulipix.pro/sitemap.xml
+Sitemap: https://transfer.tulipix.pro/sitemap.xml
