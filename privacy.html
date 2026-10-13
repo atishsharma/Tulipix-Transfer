@@ -1,170 +1,541 @@
 <!doctype html>
-<html lang="en-IN"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy · Tulipix</title>
 <meta name="description" content="Tulipix keeps your photos, music, papers and notes on your own devices. This page says what the desktop app and the Android app do with them, what they send over the network, and who to ask.">
 <link rel="canonical" href="https://tulipix.pro/privacy/">
-<meta property="og:title" content="Privacy Policy · Tulipix"><meta property="og:description" content="Tulipix keeps your photos, music, papers and notes on your own devices. This page says what the desktop app and the Android app do with them, what they send over the network, and who to ask.">
-<meta property="og:image" content="https://tulipix.pro/assets/logo-512.png"><meta property="og:type" content="website">
-<link rel="icon" href="../assets/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta property="og:title" content="Privacy Policy · Tulipix">
+<meta property="og:description" content="Tulipix keeps your photos, music, papers and notes on your own devices. This page says what the desktop app and the Android app do with them, what they send over the network, and who to ask.">
+<meta property="og:image" content="./Main-logo.png">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./Main-logo.png">
+<link rel="apple-touch-icon" href="./Main-logo.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
-<link rel="stylesheet" href="../assets/site.css">
-</head><body>
-<header class="site"><div class="wrap">
-<a class="brand" href="../trust/index.html"><img src="../assets/logo-128.png" alt="" width="34" height="34">Tulipix</a>
-<nav aria-label="Pages"><a href="../privacy/index.html" aria-current="page">Privacy</a><a href="../terms/index.html">Terms</a><a href="../permissions/index.html">Permissions</a><a href="../data-deletion/index.html">Your data</a><a href="../security/index.html">Security</a><a href="../licenses/index.html">Licences</a><a href="../support/index.html">Support</a></nav>
-<button class="theme" id="theme" type="button" aria-label="Switch light and dark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-</div></header>
+
+<style>
+/* Embedded site.css styles */
+:root{
+  --paper:#f6f5fb; --card:#ffffff; --card2:#efedf8; --ink:#1b1846; --muted:#5b5780; --line:#dedaf0;
+  --accent:#5a2fd0; --accent-ink:#ffffff; --teal:#0b8f80; --teal-bg:#dff5f1; --warm:#c2410c; --warm-bg:#fdeadf; --violet-bg:#ebe6fb;
+  --shadow:0 1px 2px rgba(27,24,70,.06),0 8px 28px rgba(27,24,70,.07);
+  --display:"Sora",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --body:"Source Serif 4",Charter,"Iowan Old Style",Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0c0b22; --card:#141339; --card2:#1b1a47; --ink:#ece9ff; --muted:#a9a5d2; --line:#2b2961;
+    --accent:#b9a2ff; --accent-ink:#17123a; --teal:#4fd9c6; --teal-bg:#10332f; --warm:#ff9d6c; --warm-bg:#3a2217; --violet-bg:#241f55;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35); color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0c0b22; --card:#141339; --card2:#1b1a47; --ink:#ece9ff; --muted:#a9a5d2; --line:#2b2961;
+  --accent:#b9a2ff; --accent-ink:#17123a; --teal:#4fd9c6; --teal-bg:#10332f; --warm:#ff9d6c; --warm-bg:#3a2217; --violet-bg:#241f55;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35); color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --paper:#f6f5fb; --card:#ffffff; --card2:#efedf8; --ink:#1b1846; --muted:#5b5780; --line:#dedaf0;
+  --accent:#5a2fd0; --accent-ink:#ffffff; --teal:#0b8f80; --teal-bg:#dff5f1; --warm:#c2410c; --warm-bg:#fdeadf; --violet-bg:#ebe6fb;
+  --shadow:0 1px 2px rgba(27,24,70,.06),0 8px 28px rgba(27,24,70,.07); color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font:18px/1.7 var(--body);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+
+/* header */
+.site{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--paper) 86%,transparent);
+  backdrop-filter:saturate(1.4) blur(14px);
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.site .wrap{display:flex;align-items:center;gap:18px;min-height:62px}
+.brand{
+  display:flex;align-items:center;gap:10px;color:var(--ink);
+  text-decoration:none;font:700 19px/1 var(--display);
+  letter-spacing:-.01em;flex:none;
+}
+.brand img{width:34px;height:34px;border-radius:6px;object-fit:contain;display:block}
+.site nav{display:flex;gap:2px;overflow-x:auto;min-width:0;flex:1;scrollbar-width:none}
+.site nav::-webkit-scrollbar{display:none}
+.site nav a{
+  flex:none;color:var(--muted);text-decoration:none;
+  font:500 14px/1 var(--display);padding:9px 12px;border-radius:99px;
+  transition:background .15s ease,color .15s ease;
+}
+.site nav a:hover{color:var(--ink);background:var(--card2)}
+.site nav a[aria-current=page]{color:var(--ink);background:var(--violet-bg);font-weight:600}
+.theme{
+  flex:none;border:1px solid var(--line);background:var(--card);
+  color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;transition:background .15s,transform .1s;
+}
+.theme:hover{background:var(--card2)}
+.theme:active{transform:scale(0.95)}
+
+/* title block */
+.title{padding-block:clamp(34px,6vw,64px) 18px}
+.eyebrow{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.tag{
+  font:600 12px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;
+  padding:6px 10px;border-radius:99px;background:var(--card2);
+  color:var(--muted);border:1px solid var(--line);
+}
+.tag.desktop{background:var(--violet-bg);color:var(--accent);border-color:transparent}
+.tag.android{background:var(--teal-bg);color:var(--teal);border-color:transparent}
+.tag.direct{background:var(--warm-bg);color:var(--warm);border-color:transparent}
+h1{font:700 clamp(32px,5.4vw,54px)/1.08 var(--display);letter-spacing:-.025em;margin:0 0 14px;text-wrap:balance}
+.lead{font-size:clamp(19px,2.2vw,22px);line-height:1.55;color:var(--muted);max-width:44rem;margin:0 0 18px;text-wrap:pretty}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;font:500 13px/1.4 var(--display);color:var(--muted);margin:0}
+.meta b{color:var(--ink);font-weight:600}
+
+/* page grid */
+.page{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(24px,5vw,64px);padding-block:20px 80px;align-items:start}
+.toc{position:sticky;top:84px;font:500 14px/1.35 var(--display);max-height:calc(100vh - 100px);overflow:auto}
+.toc h2{font:600 11px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.toc a{display:block;padding:7px 12px;margin-left:-1px;border-left:2px solid transparent;color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink);border-left-color:var(--accent);font-weight:600}
+@media (max-width:860px){
+  .page{grid-template-columns:minmax(0,1fr)}
+  .toc{position:static;max-height:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:24px}
+  .toc ol{border:0;columns:2}
+  .toc a{padding:5px 0;border:0;margin:0}
+}
+@media (max-width:520px){.toc ol{columns:1}}
+
+/* reading column */
+article{min-width:0;max-width:44rem}
+article h2{font:700 clamp(24px,3vw,30px)/1.2 var(--display);letter-spacing:-.018em;margin:2.6em 0 .55em;text-wrap:balance}
+article h2:first-child{margin-top:0}
+article h3{font:650 18px/1.3 var(--display);letter-spacing:-.005em;margin:1.8em 0 .4em}
+article p,article li{text-wrap:pretty}
+article p{margin:0 0 1em}
+article ul,article ol{padding-left:1.25em;margin:0 0 1.1em}
+article li{margin:.35em 0}
+article li::marker{color:var(--accent)}
+article strong{font-weight:650}
+article code{font:500 .84em var(--mono);background:var(--card2);border:1px solid var(--line);border-radius:6px;padding:.08em .4em;overflow-wrap:anywhere}
+article hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
+.hash{color:var(--line);text-decoration:none;margin-left:.4em;font-weight:400}
+h2:hover .hash,h3:hover .hash{color:var(--accent)}
+
+/* the short version */
+.short{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3vw,28px);margin:0 0 2.2em;box-shadow:var(--shadow)}
+.short h2{margin:0 0 14px!important;font-size:19px!important}
+.short ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px}
+@media (max-width:620px){.short ul{grid-template-columns:1fr}}
+.short li{display:grid;grid-template-columns:34px 1fr;gap:12px;margin:0;font-size:16.5px;line-height:1.5}
+.short li svg{width:34px;height:34px;padding:7px;border-radius:10px;background:var(--teal-bg);color:var(--teal);flex-shrink:0}
+.short li b{display:block;font:650 15px/1.3 var(--display);margin-bottom:2px}
+
+/* diagram */
+figure.map{margin:0 0 2.4em;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:12px 8px 6px;box-shadow:var(--shadow)}
+figure.map svg{display:block;width:100%;height:auto}
+figure.map figcaption{font:500 13px/1.5 var(--display);color:var(--muted);padding:6px 14px 12px;text-align:center}
+.m-box{fill:var(--card2);stroke:var(--line);stroke-width:1.5}
+.m-t{fill:var(--ink);font:600 15px var(--display)}
+.m-s{fill:var(--muted);font:500 12px var(--display)}
+.m-ok{stroke:var(--teal);stroke-width:2.5;fill:none}
+.m-dash{stroke:var(--muted);stroke-width:2;stroke-dasharray:5 6;fill:none}
+.m-no{stroke:var(--warm);stroke-width:2.5;fill:none}
+.m-lbl{fill:var(--teal);font:600 12px var(--display)}
+.m-lbl2{fill:var(--muted);font:600 12px var(--display)}
+.m-lbl3{fill:var(--warm);font:600 12px var(--display)}
+
+/* tables */
+.tablewrap{overflow-x:auto;margin:0 0 1.4em;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font:15px/1.5 var(--body)}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font:600 11.5px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--card2)}
+td:first-child{font-weight:600}
+td .tag{margin:2px 4px 2px 0;font-size:10.5px;padding:4px 8px}
+
+/* callouts */
+.note,.warn,.good{border-radius:14px;padding:14px 18px;margin:0 0 1.2em;font-size:16.5px;line-height:1.6}
+.note{background:var(--violet-bg)}
+.good{background:var(--teal-bg)}
+.warn{background:var(--warm-bg)}
+.note>:last-child,.warn>:last-child,.good>:last-child{margin-bottom:0}
+.note b:first-child,.warn b:first-child,.good b:first-child{font-family:var(--display);font-size:13px;letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:3px}
+
+/* footer */
+footer.site-foot{border-top:1px solid var(--line);padding-block:34px 44px;font:14px/1.6 var(--display);color:var(--muted)}
+footer.site-foot .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr);gap:24px}
+@media (max-width:700px){footer.site-foot .wrap{grid-template-columns:1fr}}
+footer.site-foot .links{display:flex;flex-wrap:wrap;gap:6px 20px}
+footer.site-foot a{color:var(--muted);text-decoration:none}
+footer.site-foot a:hover{color:var(--ink);text-decoration:underline}
+footer.site-foot b{color:var(--ink)}
+
+/* mobile table cards */
+@media (max-width:640px){
+  .tablewrap{border:0;background:none;overflow:visible}
+  table{min-width:0;display:block}
+  thead{display:none}
+  tbody,tr{display:block}
+  tr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 14px 10px;margin:0 0 10px}
+  td{display:block;border:0;padding:6px 0}
+  td:first-child{padding-top:10px;font-size:16.5px}
+  td[data-label]:not([data-label=""]):not(:first-child)::before{content:attr(data-label);display:block;font:600 10.5px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+}
+</style>
+</head>
+
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./index.html">
+      <img src="./Main-logo.png" alt="Tulipix Logo" width="34" height="34" onerror="this.style.display='none'">
+      Tulipix
+    </a>
+    <nav aria-label="Pages">
+      <a href="./privacy.html" aria-current="page">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./permissions.html">Permissions</a>
+      <a href="./data-deletion.html">Your data</a>
+      <a href="./security.html">Security</a>
+      <a href="./licenses.html">Licences</a>
+      <a href="./support.html">Support</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch light and dark">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
 <main>
 <div class="wrap title">
-<div class="eyebrow"><span class="tag desktop">Desktop app</span><span class="tag android">Android app</span></div>
-<h1>Privacy Policy</h1>
-<p class="lead">Tulipix keeps your photos, music, papers and notes on your own devices. This page says what the desktop app and the Android app do with them, what they send over the network, and who to ask.</p>
-<p class="meta"><span><b>Last updated</b> 13 October 2026</span><span><b>Covers</b> Tulipix 1.1.0</span></p>
+  <div class="eyebrow">
+    <span class="tag desktop">Desktop app</span>
+    <span class="tag android">Android app</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="lead">Tulipix keeps your photos, music, papers and notes on your own devices. This page says what the desktop app and the Android app do with them, what they send over the network, and who to ask.</p>
+  <p class="meta">
+    <span><b>Last updated</b> 13 October 2026</span>
+    <span><b>Covers</b> Tulipix 1.1.0</span>
+  </p>
 </div>
+
 <div class="wrap page">
-<aside class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#the-short-version">The short version</a></li><li><a href="#who-is-responsible">Who is responsible</a></li><li><a href="#what-this-policy-covers">What this policy covers</a></li><li><a href="#what-stays-on-your-own-devices">What stays on your own devices</a></li><li><a href="#what-moves-between-your-phone-and-your-computer">What moves between your phone and your computer</a></li><li><a href="#what-goes-to-other-services">What goes to other services</a></li><li><a href="#what-we-do-not-do">What we do not do</a></li><li><a href="#security">Security</a></li><li><a href="#how-long-data-is-kept-and-how-to-remove-it">How long data is kept, and how to remove it</a></li><li><a href="#your-rights">Your rights</a></li><li><a href="#children">Children</a></li><li><a href="#changes-to-this-policy">Changes to this policy</a></li><li><a href="#contact-and-grievances">Contact and grievances</a></li></ol></aside>
-<article>
-<section class="short">
-<h2 id="the-short-version">The short version</h2>
-<ul>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/><path d="M3 3l18 18" /></svg><span><b>No account</b>There is nothing to sign up for. We hold no list of users, because there are none.</span></li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4 4 0 0117 18z"/><path d="M3 3l18 18"/></svg><span><b>No servers of ours</b>Your files go from your phone to your computer, and nowhere else. We run nothing that receives them.</span></li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></svg><span><b>No tracking</b>No analytics and no ads of ours. On the computer a crash report is a local file that leaves only if you press Report.</span></li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg><span><b>Locked to your computer</b>The phone trusts the one certificate it saw when you paired, and nothing else.</span></li>
-</ul>
-</section>
+  <aside class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#the-short-version">The short version</a></li>
+      <li><a href="#who-is-responsible">Who is responsible</a></li>
+      <li><a href="#what-this-policy-covers">What this policy covers</a></li>
+      <li><a href="#what-stays-on-your-own-devices">What stays on your own devices</a></li>
+      <li><a href="#what-moves-between-your-phone-and-your-computer">What moves between your phone and your computer</a></li>
+      <li><a href="#what-goes-to-other-services">What goes to other services</a></li>
+      <li><a href="#what-we-do-not-do">What we do not do</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#how-long-data-is-kept-and-how-to-remove-it">How long data is kept, and how to remove it</a></li>
+      <li><a href="#your-rights">Your rights</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#changes-to-this-policy">Changes to this policy</a></li>
+      <li><a href="#contact-and-grievances">Contact and grievances</a></li>
+    </ol>
+  </aside>
 
-<figure class="map">
-<svg viewBox="0 0 760 250" role="img" aria-labelledby="mapt mapd">
-<title id="mapt">Where your data goes</title>
-<desc id="mapd">Your phone and your computer exchange files over your own network. The computer talks to outside services only when a feature needs it. Tulipix has no server in the middle.</desc>
-<rect class="m-box" x="30" y="70" width="150" height="110" rx="22"/>
-<text class="m-t" x="105" y="118" text-anchor="middle">Your phone</text><text class="m-s" x="105" y="140" text-anchor="middle">Android app</text>
-<rect class="m-box" x="300" y="70" width="170" height="110" rx="22"/>
-<text class="m-t" x="385" y="118" text-anchor="middle">Your computer</text><text class="m-s" x="385" y="140" text-anchor="middle">Desktop app · your data</text>
-<rect class="m-box" x="590" y="20" width="150" height="76" rx="22"/>
-<text class="m-t" x="665" y="54" text-anchor="middle">Services you use</text><text class="m-s" x="665" y="74" text-anchor="middle">lyrics, covers, updates</text>
-<path class="m-ok" d="M182 108 H298 M182 142 H298"/><path class="m-ok" d="M290 101 l8 7 -8 7 M190 135 l-8 7 8 7"/>
-<text class="m-lbl" x="240" y="94" text-anchor="middle">TLS, pinned key</text><text class="m-s" x="240" y="170" text-anchor="middle">your own Wi-Fi</text>
-<path class="m-dash" d="M472 100 C520 100 540 58 588 58"/><text class="m-lbl2" x="498" y="116">only when a feature asks</text>
-<g><rect class="m-box" x="290" y="204" width="190" height="34" rx="17" stroke-dasharray="4 5"/><text class="m-s" x="385" y="226" text-anchor="middle"><tspan class="m-lbl3">✕</tspan>  Tulipix servers: none</text></g>
-</svg>
-<figcaption>The two apps talk to each other. Neither one reports to us.</figcaption>
-</figure>
+  <article>
+    <section class="short">
+      <h2 id="the-short-version">The short version</h2>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/><path d="M3 3l18 18" /></svg>
+          <span><b>No account</b>There is nothing to sign up for. We hold no list of users, because there are none.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4 4 0 0117 18z"/><path d="M3 3l18 18"/></svg>
+          <span><b>No servers of ours</b>Your files go from your phone to your computer, and nowhere else. We run nothing that receives them.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18"/></svg>
+          <span><b>No tracking</b>No analytics and no ads of ours. On the computer a crash report is a local file that leaves only if you press Report.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+          <span><b>Locked to your computer</b>The phone trusts the one certificate it saw when you paired, and nothing else.</span>
+        </li>
+      </ul>
+    </section>
 
-<h2 id="who-is-responsible">Who is responsible</h2>
-<p>Tulipix is made by <strong>Atish AK Sharma</strong>, an individual developer in India. In this policy "we" means Atish AK Sharma. You can reach us at <strong><span class="todo">newxperiasola@gmail.com</span></strong> or through <a href="https://tulipix.pro">https://tulipix.pro</a>.</p>
+    <figure class="map">
+      <svg viewBox="0 0 760 250" role="img" aria-labelledby="mapt mapd">
+        <title id="mapt">Where your data goes</title>
+        <desc id="mapd">Your phone and your computer exchange files over your own network. The computer talks to outside services only when a feature needs it. Tulipix has no server in the middle.</desc>
+        <rect class="m-box" x="30" y="70" width="150" height="110" rx="22"/>
+        <text class="m-t" x="105" y="118" text-anchor="middle">Your phone</text>
+        <text class="m-s" x="105" y="140" text-anchor="middle">Android app</text>
+        
+        <rect class="m-box" x="300" y="70" width="170" height="110" rx="22"/>
+        <text class="m-t" x="385" y="118" text-anchor="middle">Your computer</text>
+        <text class="m-s" x="385" y="140" text-anchor="middle">Desktop app · your data</text>
+        
+        <rect class="m-box" x="590" y="20" width="150" height="76" rx="22"/>
+        <text class="m-t" x="665" y="54" text-anchor="middle">Services you use</text>
+        <text class="m-s" x="665" y="74" text-anchor="middle">lyrics, covers, updates</text>
+        
+        <path class="m-ok" d="M182 108 H298 M182 142 H298"/>
+        <path class="m-ok" d="M290 101 l8 7 -8 7 M190 135 l-8 7 8 7"/>
+        <text class="m-lbl" x="240" y="94" text-anchor="middle">TLS, pinned key</text>
+        <text class="m-s" x="240" y="170" text-anchor="middle">your own Wi-Fi</text>
+        
+        <path class="m-dash" d="M472 100 C520 100 540 58 588 58"/>
+        <text class="m-lbl2" x="498" y="116">only when a feature asks</text>
+        
+        <g>
+          <rect class="m-box" x="290" y="204" width="190" height="34" rx="17" stroke-dasharray="4 5"/>
+          <text class="m-s" x="385" y="226" text-anchor="middle"><tspan class="m-lbl3">✕</tspan> Tulipix servers: none</text>
+        </g>
+      </svg>
+      <figcaption>The two apps talk to each other. Neither one reports to us.</figcaption>
+    </figure>
 
-<h2 id="what-this-policy-covers">What this policy covers</h2>
-<ul>
-<li><strong>Tulipix for desktop</strong>, the app that holds your library.</li>
-<li><strong>Tulipix Companion for Android</strong> (package <code>app.tulipix.companion</code>), on Google Play and as a direct download.</li>
-<li><strong>These web pages</strong>. They set no cookies and run no analytics; your light or dark choice stays in your browser. They load their fonts from Google Fonts, which sees your IP address when they do.</li>
-</ul>
-<p>The pages on <a href="../permissions/index.html">permissions</a>, <a href="../data-deletion/index.html">your data</a> and <a href="../security/index.html">security</a> are part of this policy.</p>
+    <h2 id="who-is-responsible">Who is responsible</h2>
+    <p>Tulipix is made by <strong>Atish AK Sharma</strong>, an individual developer in India. In this policy "we" means Atish AK Sharma. You can reach us at <strong><a href="mailto:mail@atishaksharma.com">mail@atishaksharma.com</a></strong> or through <a href="https://tulipix.pro">https://tulipix.pro</a>.</p>
 
-<h2 id="what-stays-on-your-own-devices">What stays on your own devices</h2>
-<p>Nearly everything. The apps are built so that your library never has to leave the machines you own.</p>
-<h3 id="on-your-computer">On your computer</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>What</th><th>Where and how</th></tr></thead><tbody>
-<tr><td data-label="What">Your libraries</td><td data-label="Where and how">One local database per section (photos, videos, music, books, papers, finances, journal and the rest) in Tulipix's data folder. Your files themselves are not changed.</td></tr>
-<tr><td data-label="What">Settings and keys</td><td data-label="Where and how">Kept in the same folder. API keys you enter, such as a TMDB key, are kept in an app vault there, not in a cloud.</td></tr>
-<tr><td data-label="What">Logs and crashes</td><td data-label="Where and how">Rolling log files and crash dumps, written locally. Nothing is uploaded unless you press Report.</td></tr>
-<tr><td data-label="What">Downloaded models and tools</td><td data-label="Where and how">AI models and helper programs you choose to download are stored beside your data.</td></tr>
-<tr><td data-label="What">Protection</td><td data-label="Where and how">Optional: an app PIN, fingerprint or security key; database encryption (SQLCipher); a Papers vault encrypted with ChaCha20-Poly1305 that re-locks after five minutes.</td></tr>
-</tbody></table></div>
-<p>The data folder is <code>~/.config/Tulipix</code> on Linux, <code>~/Library/Application Support/Tulipix</code> on macOS and <code>%APPDATA%\Tulipix</code> on Windows.</p>
+    <h2 id="what-this-policy-covers">What this policy covers</h2>
+    <ul>
+      <li><strong>Tulipix for desktop</strong>, the app that holds your library.</li>
+      <li><strong>Tulipix Companion for Android</strong> (package <code>app.tulipix.companion</code>), on Google Play and as a direct download.</li>
+      <li><strong>These web pages</strong>. They set no cookies and run no analytics; your light or dark choice stays in your browser. They load their fonts from Google Fonts, which sees your IP address when they do.</li>
+    </ul>
+    <p>The pages on <a href="./permissions.html">permissions</a>, <a href="./data-deletion.html">your data</a> and <a href="./security.html">security</a> are part of this policy.</p>
 
-<h3 id="on-your-phone">On your phone</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>What</th><th>Where and how</th></tr></thead><tbody>
-<tr><td data-label="What">Pairing</td><td data-label="Where and how">The phone's own key is made in the Android Keystore. It also keeps the fingerprint of the one computer you paired with.</td></tr>
-<tr><td data-label="What">Library index</td><td data-label="Where and how">"Just this phone" lists the music, videos and photos Android already knows about. The list is kept in the app's private storage.</td></tr>
-<tr><td data-label="What">Caches and preferences</td><td data-label="Where and how">Cover pictures, thumbnails, lyrics and their English translations, the transfer queue, backup progress and your settings.</td></tr>
-<tr><td data-label="What">Offline copies</td><td data-label="Where and how">Only what you choose to keep offline.</td></tr>
-<tr><td data-label="What">Android backup</td><td data-label="Where and how">Switched off for this app. Android's cloud backup and phone-to-phone copy do not take Tulipix's data, so the pairing keys cannot be copied away.</td></tr>
-</tbody></table></div>
+    <h2 id="what-stays-on-your-own-devices">What stays on your own devices</h2>
+    <p>Nearly everything. The apps are built so that your library never has to leave the machines you own.</p>
+    
+    <h3 id="on-your-computer">On your computer</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>What</th><th>Where and how</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="What">Your libraries</td><td data-label="Where and how">One local database per section (photos, videos, music, books, papers, finances, journal and the rest) in Tulipix's data folder. Your files themselves are not changed.</td></tr>
+          <tr><td data-label="What">Settings and keys</td><td data-label="Where and how">Kept in the same folder. API keys you enter, such as a TMDB key, are kept in an app vault there, not in a cloud.</td></tr>
+          <tr><td data-label="What">Logs and crashes</td><td data-label="Where and how">Rolling log files and crash dumps, written locally. Nothing is uploaded unless you press Report.</td></tr>
+          <tr><td data-label="What">Downloaded models and tools</td><td data-label="Where and how">AI models and helper programs you choose to download are stored beside your data.</td></tr>
+          <tr><td data-label="What">Protection</td><td data-label="Where and how">Optional: an app PIN, fingerprint or security key; database encryption (SQLCipher); a Papers vault encrypted with ChaCha20-Poly1305 that re-locks after five minutes.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The data folder is <code>~/.config/Tulipix</code> on Linux, <code>~/Library/Application Support/Tulipix</code> on macOS and <code>%APPDATA%\Tulipix</code> on Windows.</p>
 
-<h2 id="what-moves-between-your-phone-and-your-computer">What moves between your phone and your computer</h2>
-<p>When you pair, the two devices talk directly over your own network. The link uses TLS. The phone accepts the computer's certificate only if it matches the fingerprint recorded at pairing, and the computer recognises the phone by the certificate the phone made. No other certificate is trusted, not even one that looks valid.</p>
-<p>Only what you ask for travels:</p>
-<ul>
-<li>files, links, text and the clipboard you send from the phone;</li>
-<li>photos and videos, if you switch on camera backup (the computer checks what it already has so nothing is sent twice);</li>
-<li>paper scans, receipts, voice notes, journal entries and shopping items from the Capture tab;</li>
-<li>from the computer: library lists, cover pictures, streams for playback, files it offers you, and what is playing;</li>
-<li><span class="tag direct">Direct download only</span> bank text messages that look like payments, if you switch on Bank SMS. This is off by default, and the Google Play version does not have it.</li>
-</ul>
-<p>You can unpair at any time from the phone or from the computer's Companion section. A removed phone is refused at once.</p>
+    <h3 id="on-your-phone">On your phone</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>What</th><th>Where and how</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="What">Pairing</td><td data-label="Where and how">The phone's own key is made in the Android Keystore. It also keeps the fingerprint of the one computer you paired with.</td></tr>
+          <tr><td data-label="What">Library index</td><td data-label="Where and how">"Just this phone" lists the music, videos and photos Android already knows about. The list is kept in the app's private storage.</td></tr>
+          <tr><td data-label="What">Caches and preferences</td><td data-label="Where and how">Cover pictures, thumbnails, lyrics and their English translations, the transfer queue, backup progress and your settings.</td></tr>
+          <tr><td data-label="What">Offline copies</td><td data-label="Where and how">Only what you choose to keep offline.</td></tr>
+          <tr><td data-label="What">Android backup</td><td data-label="Where and how">Switched off for this app. Android's cloud backup and phone-to-phone copy do not take Tulipix's data, so the pairing keys cannot be copied away.</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-<h2 id="what-goes-to-other-services">What goes to other services</h2>
-<p>Tulipix makes network requests only for the features below. As with any web request, the other service sees your IP address and is covered by its own privacy policy.</p>
-<h3 id="desktop-app">Desktop app</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>Service</th><th>Why</th><th>What is sent</th></tr></thead><tbody>
-<tr><td data-label="Service">Metadata sources: MusicBrainz, Cover Art Archive, Apple's iTunes search, Discogs, Last.fm, TMDB, AniList, Open Library, Wikipedia</td><td data-label="Why">Names, covers, descriptions and ratings for your library.</td><td data-label="What is sent">The title, artist, album, ISBN or name being looked up. TMDB needs your own API key.</td></tr>
-<tr><td data-label="Service">LRCLIB</td><td data-label="Why">Timed lyrics.</td><td data-label="What is sent">Title, artist, album and length of the song.</td></tr>
-<tr><td data-label="Service">Last.fm, ListenBrainz</td><td data-label="Why">Scrobbling, only if you sign in to them.</td><td data-label="What is sent">The tracks you play.</td></tr>
-<tr><td data-label="Service">YouTube and other sites you open</td><td data-label="Why">Playing or downloading what you ask for, with yt-dlp and ffmpeg.</td><td data-label="What is sent">The address you open.</td></tr>
-<tr><td data-label="Service">Currency rates (open.er-api.com)</td><td data-label="Why">Finances in more than one currency.</td><td data-label="What is sent">A currency code.</td></tr>
-<tr><td data-label="Service">GeoNames</td><td data-label="Why">Place names for photos and the journal.</td><td data-label="What is sent">Nothing about you: a public list of cities is downloaded once and your coordinates are looked up on the computer.</td></tr>
-<tr><td data-label="Service">GitHub, Hugging Face</td><td data-label="Why">Update checks, helper tools (yt-dlp, ffmpeg, rclone) and the AI models you choose to download.</td><td data-label="What is sent">The download request. Downloads are checked against published checksums.</td></tr>
-<tr><td data-label="Service">Your own cloud account (through rclone)</td><td data-label="Why">The Cloud section.</td><td data-label="What is sent">Your files, between your computer and the provider you connect. Your login details stay on your computer.</td></tr>
-<tr><td data-label="Service">Feeds, podcasts, radio stations</td><td data-label="Why">What you subscribe to.</td><td data-label="What is sent">The subscription address.</td></tr>
-</tbody></table></div>
-<h3 id="android-app">Android app</h3>
-<div class="tablewrap"><table>
-<thead><tr><th>Service</th><th>Why</th><th>What is sent</th></tr></thead><tbody>
-<tr><td data-label="Service">LRCLIB (lrclib.net)</td><td data-label="Why">Lyrics for songs on the phone. <span class="tag">Optional</span></td><td data-label="What is sent">Title, artist, album and length, over HTTPS. Turn it off in Settings › Find lyrics online in "Just this phone".</td></tr>
-<tr><td data-label="Service">Google ML Kit</td><td data-label="Why">English lines under lyrics, and telling which language a song is in.</td><td data-label="What is sent">Nothing about your songs. The language model (about 30 MB each) is downloaded from Google once; the words are translated on the phone.</td></tr>
-<tr><td data-label="Service">Google Play services</td><td data-label="Why">The document and code scanners.</td><td data-label="What is sent">Nothing: pictures are read on the phone.</td></tr>
-</tbody></table></div>
-<p>The Android app contains no advertising or analytics of ours and uploads no crash reports. Google's ML Kit and Play services components, which do the translating and the scanning, may send Google performance and diagnostic information, as Google describes in its ML Kit data disclosure. They do not receive your pictures, files or lyrics.</p>
+    <h2 id="what-moves-between-your-phone-and-your-computer">What moves between your phone and your computer</h2>
+    <p>When you pair, the two devices talk directly over your own network. The link uses TLS. The phone accepts the computer's certificate only if it matches the fingerprint recorded at pairing, and the computer recognises the phone by the certificate the phone made. No other certificate is trusted, not even one that looks valid.</p>
+    <p>Only what you ask for travels:</p>
+    <ul>
+      <li>files, links, text and the clipboard you send from the phone;</li>
+      <li>photos and videos, if you switch on camera backup (the computer checks what it already has so nothing is sent twice);</li>
+      <li>paper scans, receipts, voice notes, journal entries and shopping items from the Capture tab;</li>
+      <li>from the computer: library lists, cover pictures, streams for playback, files it offers you, and what is playing;</li>
+      <li><span class="tag direct">Direct download only</span> bank text messages that look like payments, if you switch on Bank SMS. This is off by default, and the Google Play version does not have it.</li>
+    </ul>
+    <p>You can unpair at any time from the phone or from the computer's Companion section. A removed phone is refused at once.</p>
 
-<h2 id="what-we-do-not-do">What we do not do</h2>
-<ul>
-<li>We do not collect, sell, rent or share your personal data, because we never receive it.</li>
-<li>We do not show ads or build profiles.</li>
-<li>We do not read your contacts, calls or location. A photo's location is read from the picture on your phone, only to show where it was taken, and stays there.</li>
-<li>We do not upload your crashes, logs or usage in the background.</li>
-</ul>
+    <h2 id="what-goes-to-other-services">What goes to other services</h2>
+    <p>Tulipix makes network requests only for the features below. As with any web request, the other service sees your IP address and is covered by its own privacy policy.</p>
 
-<h2 id="security">Security</h2>
-<ul>
-<li>Pinned TLS between phone and computer, with a pairing code or PIN and a banner on the computer when a new phone pairs.</li>
-<li>The phone's key lives in the Android Keystore; the app's data is excluded from Android backups.</li>
-<li>The media proxy on the phone listens on the phone only, behind a random token.</li>
-<li>On the computer: optional PIN, fingerprint or security key; database encryption; an encrypted Papers vault; helper programs checked against published checksums.</li>
-</ul>
-<p>More on the <a href="../security/index.html">security page</a>, including how to report a problem.</p>
+    <h3 id="desktop-app">Desktop app</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Why</th><th>What is sent</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Service">Metadata sources: MusicBrainz, Cover Art Archive, Apple's iTunes search, Discogs, Last.fm, TMDB, AniList, Open Library, Wikipedia</td><td data-label="Why">Names, covers, descriptions and ratings for your library.</td><td data-label="What is sent">The title, artist, album, ISBN or name being looked up. TMDB needs your own API key.</td></tr>
+          <tr><td data-label="Service">LRCLIB</td><td data-label="Why">Timed lyrics.</td><td data-label="What is sent">Title, artist, album and length of the song.</td></tr>
+          <tr><td data-label="Service">Last.fm, ListenBrainz</td><td data-label="Why">Scrobbling, only if you sign in to them.</td><td data-label="What is sent">The tracks you play.</td></tr>
+          <tr><td data-label="Service">YouTube and other sites you open</td><td data-label="Why">Playing or downloading what you ask for, with yt-dlp and ffmpeg.</td><td data-label="What is sent">The address you open.</td></tr>
+          <tr><td data-label="Service">Currency rates (open.er-api.com)</td><td data-label="Why">Finances in more than one currency.</td><td data-label="What is sent">A currency code.</td></tr>
+          <tr><td data-label="Service">GeoNames</td><td data-label="Why">Place names for photos and the journal.</td><td data-label="What is sent">Nothing about you: a public list of cities is downloaded once and your coordinates are looked up on the computer.</td></tr>
+          <tr><td data-label="Service">GitHub, Hugging Face</td><td data-label="Why">Update checks, helper tools (yt-dlp, ffmpeg, rclone) and the AI models you choose to download.</td><td data-label="What is sent">The download request. Downloads are checked against published checksums.</td></tr>
+          <tr><td data-label="Service">Your own cloud account (through rclone)</td><td data-label="Why">The Cloud section.</td><td data-label="What is sent">Your files, between your computer and the provider you connect. Your login details stay on your computer.</td></tr>
+          <tr><td data-label="Service">Feeds, podcasts, radio stations</td><td data-label="Why">What you subscribe to.</td><td data-label="What is sent">The subscription address.</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-<h2 id="how-long-data-is-kept-and-how-to-remove-it">How long data is kept, and how to remove it</h2>
-<p>We keep nothing, so there is nothing for us to delete. What is on your devices stays until you remove it. <a href="../data-deletion/index.html">Your data</a> shows how to clear the phone, unpair, and clear the computer, step by step. Files you sent to the computer are your files in the folders you chose; removing the app does not delete them.</p>
+    <h3 id="android-app">Android app</h3>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Why</th><th>What is sent</th></tr>
+        </thead>
+        <tbody>
+          <tr><td data-label="Service">LRCLIB (lrclib.net)</td><td data-label="Why">Lyrics for songs on the phone. <span class="tag">Optional</span></td><td data-label="What is sent">Title, artist, album and length, over HTTPS. Turn it off in Settings › Find lyrics online in "Just this phone".</td></tr>
+          <tr><td data-label="Service">Google ML Kit</td><td data-label="Why">English lines under lyrics, and telling which language a song is in.</td><td data-label="What is sent">Nothing about your songs. The language model (about 30 MB each) is downloaded from Google once; the words are translated on the phone.</td></tr>
+          <tr><td data-label="Service">Google Play services</td><td data-label="Why">The document and code scanners.</td><td data-label="What is sent">Nothing: pictures are read on the phone.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The Android app contains no advertising or analytics of ours and uploads no crash reports. Google's ML Kit and Play services components, which do the translating and the scanning, may send Google performance and diagnostic information, as Google describes in its ML Kit data disclosure. They do not receive your pictures, files or lyrics.</p>
 
-<h2 id="your-rights">Your rights</h2>
-<p><strong>In India</strong>, the Digital Personal Data Protection Act, 2023 gives you the right to know what is done with your personal data, to have it corrected or erased, to have grievances heard, and to name someone to act for you. <strong>In the EEA and the UK</strong> the GDPR gives similar rights, including access, correction, erasure, restriction, portability and objection, and the right to complain to your data-protection authority.</p>
-<p>Because the apps process your data on your own devices and we hold none, you exercise most of these directly: you can see, export and delete everything yourself. If you think we hold something about you anyway, write to us and we will say what, and fix it.</p>
+    <h2 id="what-we-do-not-do">What we do not do</h2>
+    <ul>
+      <li>We do not collect, sell, rent or share your personal data, because we never receive it.</li>
+      <li>We do not show ads or build profiles.</li>
+      <li>We do not read your contacts, calls or location. A photo's location is read from the picture on your phone, only to show where it was taken, and stays there.</li>
+      <li>We do not upload your crashes, logs or usage in the background.</li>
+    </ul>
 
-<h2 id="children">Children</h2>
-<p>Tulipix is a tool for adults and is not directed at children under 13. We do not knowingly collect anything from anyone, children included.</p>
+    <h2 id="security">Security</h2>
+    <ul>
+      <li>Pinned TLS between phone and computer, with a pairing code or PIN and a banner on the computer when a new phone pairs.</li>
+      <li>The phone's key lives in the Android Keystore; the app's data is excluded from Android backups.</li>
+      <li>The media proxy on the phone listens on the phone only, behind a random token.</li>
+      <li>On the computer: optional PIN, fingerprint or security key; database encryption; an encrypted Papers vault; helper programs checked against published checksums.</li>
+    </ul>
+    <p>More on the <a href="./security.html">security page</a>, including how to report a problem.</p>
 
-<h2 id="changes-to-this-policy">Changes to this policy</h2>
-<p>When the apps change in a way that matters here (a new service they contact, a new permission), we update this page and its date before the release goes out. The date at the top shows the latest version. Older versions are available on request.</p>
+    <h2 id="how-long-data-is-kept-and-how-to-remove-it">How long data is kept, and how to remove it</h2>
+    <p>We keep nothing, so there is nothing for us to delete. What is on your devices stays until you remove it. <a href="./data-deletion.html">Your data</a> shows how to clear the phone, unpair, and clear the computer, step by step. Files you sent to the computer are your files in the folders you chose; removing the app does not delete them.</p>
 
-<h2 id="contact-and-grievances">Contact and grievances</h2>
-<p>Questions, requests or complaints about privacy: <strong><span class="todo">newxperiasola@gmail.com</span></strong>. We reply within 30 days, and sooner when we can.</p>
-<div class="note"><b>Grievance contact</b>Atish AK Sharma, <span class="todo">Chandigarh, India</span> · <span class="todo">mail@atishaksharma.com</span></div>
+    <h2 id="your-rights">Your rights</h2>
+    <p><strong>In India</strong>, the Digital Personal Data Protection Act, 2023 gives you the right to know what is done with your personal data, to have it corrected or erased, to have grievances heard, and to name someone to act for you. <strong>In the EEA and the UK</strong> the GDPR gives similar rights, including access, correction, erasure, restriction, portability and objection, and the right to complain to your data-protection authority.</p>
+    <p>Because the apps process your data on your own devices and we hold none, you exercise most of these directly: you can see, export and delete everything yourself. If you think we hold something about you anyway, write to us and we will say what, and fix it.</p>
 
+    <h2 id="children">Children</h2>
+    <p>Tulipix is a tool for adults and is not directed at children under 13. We do not knowingly collect anything from anyone, children included.</p>
 
-</article>
+    <h2 id="changes-to-this-policy">Changes to this policy</h2>
+    <p>When the apps change in a way that matters here (a new service they contact, a new permission), we update this page and its date before the release goes out. The date at the top shows the latest version. Older versions are available on request.</p>
+
+    <h2 id="contact-and-grievances">Contact and grievances</h2>
+    <p>Questions, requests or complaints about privacy: <strong><a href="mailto:mail@atishaksharma.com">mail@atishaksharma.com</a></strong>. We reply within 30 days, and sooner when we can.</p>
+    <div class="note"><b>Grievance contact</b>Atish AK Sharma, Chandigarh, India · <a href="mailto:mail@atishaksharma.com">mail@atishaksharma.com</a></div>
+  </article>
 </div>
 </main>
-<footer class="site-foot"><div class="wrap">
-<div><b>Tulipix</b><br>Made by <a href="https://atishaksharma.com">Atish AK Sharma</a><br>© 2026</div>
-<div class="links"><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a><a href="../permissions/index.html">Permissions</a><a href="../data-deletion/index.html">Your data</a><a href="../security/index.html">Security</a><a href="../licenses/index.html">Licences</a><a href="../support/index.html">Support</a><a href="https://tulipix.pro">tulipix.pro</a></div>
-</div></footer>
-<script src="../assets/site.js"></script>
-</body></html>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div><b>Tulipix</b><br>Made by <a href="https://atishaksharma.com">Atish AK Sharma</a><br>© 2026</div>
+    <div class="links">
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./permissions.html">Permissions</a>
+      <a href="./data-deletion.html">Your data</a>
+      <a href="./security.html">Security</a>
+      <a href="./licenses.html">Licences</a>
+      <a href="./support.html">Support</a>
+      <a href="https://tulipix.pro">tulipix.pro</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Embedded site.js logic
+(function(){
+  var root = document.documentElement;
+  
+  // Theme state persistence
+  try {
+    var storedTheme = localStorage.getItem('tulipix-theme');
+    if (storedTheme) {
+      root.setAttribute('data-theme', storedTheme);
+    }
+  } catch(e) {}
+
+  var themeBtn = document.getElementById('theme');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function() {
+      var currentTheme = root.getAttribute('data-theme');
+      var isDark = currentTheme === 'dark' || (!currentTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var nextTheme = isDark ? 'light' : 'dark';
+      root.setAttribute('data-theme', nextTheme);
+      try {
+        localStorage.setItem('tulipix-theme', nextTheme);
+      } catch(e) {}
+    });
+  }
+
+  // Heading anchor links
+  document.querySelectorAll('article h2[id], article h3[id]').forEach(function(h) {
+    var a = document.createElement('a');
+    a.className = 'hash';
+    a.href = '#' + h.id;
+    a.textContent = '#';
+    a.setAttribute('aria-label', 'Link to this section');
+    h.appendChild(a);
+  });
+
+  // Table of contents active item tracking
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  if (tocLinks.length && ('IntersectionObserver' in window)) {
+    var linkMap = {};
+    tocLinks.forEach(function(a) {
+      var targetId = a.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        linkMap[targetId.substring(1)] = a;
+      }
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(function(l) { l.classList.remove('on'); });
+          var activeLink = linkMap[entry.target.id];
+          if (activeLink) activeLink.classList.add('on');
+        }
+      });
+    }, { rootMargin: '-80px 0px -70% 0px' });
+
+    document.querySelectorAll('article h2[id]').forEach(function(heading) {
+      observer.observe(heading);
+    });
+  }
+})();
+</script>
+</body>
+</html>
